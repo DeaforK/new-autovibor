@@ -1,0 +1,46 @@
+@font-face {
+  font-family: 'Montserrat';
+  src: url('/fonts/Montserrat-Medium.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Montserrat';
+  src: url('/fonts/Montserrat-SemiBold.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Montserrat';
+  src: url('/fonts/Montserrat-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Montserrat';
+  src: url('/fonts/Montserrat-ExtraBold.ttf') format('truetype');
+  font-weight: 800;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Montserrat';
+  src: url('/fonts/Montserrat-Black.ttf') format('truetype');
+  font-weight: 900;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'BadScript';
+  src: url('/fonts/BadScript-Regular.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'TT Hoves';
+  src: url('/fonts/TTHoves-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+/* body {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  background-color: #fff;
+  overflow-x: hidden;
+} */

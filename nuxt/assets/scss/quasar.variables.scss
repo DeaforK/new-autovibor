@@ -1,0 +1,21 @@
+$positive: #2bb35a;
+$negative: #e65e6e;
+$info: #31ccec;
+$warning: #f2c037;
+
+$primary   : #E15A2B;
+$secondary : #FFFFFF;
+$accent    : #242424;
+$dark      : #1D1D1D;
+$input :#818181;
+
+// Переменные для панели
+$panel-primary: #ff7140f7;
+
+// Для props color в компонентах
+.text-panel-primary {
+  color: $panel-primary !important;
+}
+.bg-panel-primary {
+  background: $panel-primary !important;
+}

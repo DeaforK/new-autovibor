@@ -1,0 +1,125 @@
+.container {
+  max-width: 100%;
+  margin: 0 auto;
+
+  &__orange_wrapper_flex {
+    &__container {
+      margin: 40px auto;
+      display: flex;
+      flex-direction: row;
+      color: white;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 20px;
+
+      @include more-than-tablet {
+        flex-wrap: nowrap;
+        max-width: 80%;
+      }
+
+      img {
+        max-width: 80%;
+      }
+
+      h2 {
+        font-weight: bold;
+        line-height: 39px;
+        margin-bottom: 20px;
+        text-align: center;
+        @include more-than-small-mobile {
+          font-size: 28px;
+        }
+
+        @include more-than-tablet {
+          font-size: 32px;
+          text-align: left;
+        }
+      }
+
+      p {
+        font-size: 18px;
+        line-height: 170%;
+        margin-bottom: 20px;
+        text-align: center;
+        @include more-than-tablet {
+          max-width: 70%;
+          text-align: left;
+        }
+      }
+      .icon-phone {
+        display: none;
+        @include more-than-laptop {
+          display: block;
+        }
+      }
+
+      &__button_wrapper {
+        display: flex;
+
+        gap: 20px;
+        flex-wrap: wrap;
+
+        @include more-than-small-mobile {
+          justify-content: center;
+        }
+
+        @include more-than-tablet {
+          justify-content: flex-start;
+          flex-wrap: nowrap;
+        }
+      }
+    }
+  }
+
+  &__white_content {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: space-between;
+    gap: 30px;
+    align-items: flex-start;
+    @include more-than-mobile {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @include more-than-laptop {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  
+  &__social {
+    @include more-than-small-mobile {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 30px;
+    }
+
+    @include more-than-tablet {
+      align-items: flex-start;
+    }
+
+    &__wrapper {
+      display: flex;
+      flex-direction: row;
+      gap: 10px;
+
+      &__item {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        border: 1px solid #ffffff34;
+        margin-bottom: 3px;
+
+        a {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+      }
+    }
+  }
+}

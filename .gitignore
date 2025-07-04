@@ -1,0 +1,11 @@
+# Database
+postgres
+
+# macOS
+.DS_Store
+
+.env
+
+/certs
+
+/caddy/caddy-data

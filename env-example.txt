@@ -1,0 +1,20 @@
+# development or production
+NODE_ENV=development
+
+DB_DATABASE=nuxt_cms
+DB_USERNAME=avtovibor
+DB_PASSWORD=xc!Fhg4aQ6GJ76hGfXz1^4
+DB_HOST=postgres
+API_URL=http://nuxt:3000
+
+NUXT_HOST=0.0.0.0
+NUXT_PORT=3000
+
+REDIS_LINK=redis://redis:6379
+
+ENABLE_SEQUELIZE_LOGS=1 # 0 / 1
+
+COMPOSE_FILE=docker-compose.${NODE_ENV}.yml
+
+NUXT_PUBLIC_RECAPTCHA_SITE_KEY=6Lfn6HIrAAAAALb181HofWBAzqkJDsqPhfX7bC_z
+RECAPTCHA_SECRET_KEY=6Lfn6HIrAAAAANnL89Ks0VxgTc-SqDHA6dqNdTSd

@@ -1,0 +1,16 @@
+import PageAdapter from '~/server/app/adapters/page/page.adapter'
+import { createErrorResponse } from '~/server/app/shared/exceptions'
+
+const pageAdap = new PageAdapter()
+const type = 'videoReviews'
+export default defineEventHandler(async event => {
+  try {
+    const body = await readBody(event)
+    const page = body ? Number(body) : 0
+    const result = await pageAdap.findAndCountAllByType(Number(page) || 0, type)
+
+    return result
+  } catch (error) {
+    return createErrorResponse(event, error)
+  }
+})

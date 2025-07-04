@@ -1,0 +1,10 @@
+<template>
+  <a
+    class="flamp-widget"
+    :href="'//ekaterinburg.flamp.ru/firm/avtovybor_centr_podbora_avtomobilejj_i_vyezdnojj_diagnostiki-70000001029217201'"
+    data-flamp-widget-type="responsive-new"
+    :data-flamp-widget-id="'70000001029217201'"
+    data-flamp-widget-width="100%"
+    data-flamp-widget-count="1"
+  />
+</template>

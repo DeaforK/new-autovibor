@@ -1,0 +1,8 @@
+https://xn----7sbdbcax4b5acwt3j.xn--p1ai {
+  @cachedFiles {
+    path *.jpg *.jpeg *.png *.gif *.ico *.js *.css
+  }
+  header @cachedFiles Cache-Control "public, max-age=604800, must-revalidate"
+  encode gzip
+  reverse_proxy http://nginx:80
+}
