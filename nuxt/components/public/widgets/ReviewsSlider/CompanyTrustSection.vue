@@ -64,7 +64,6 @@
 </template>
 
 <script setup lang="ts">
-// Нет скриптов, только шаблон
 </script>
 
 <style scoped lang="scss">

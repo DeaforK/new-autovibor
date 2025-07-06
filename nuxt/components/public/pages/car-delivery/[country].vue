@@ -11,21 +11,12 @@
     <PublicWidgetsInfoStatistics
       :statistics="importedPageStatistics"
     />
-    <!-- <PublicWidgetsInfoChooseUsedCar /> -->
     <PublicWidgetsCarFilter />
-    <PublicWidgetsReviewsBlock />
+    <PublicWidgetsReviewsBlock :reviews="pageData.reviews" />
     <PublicWidgetsSection2 />
     <CarCostEstimateSection />
     <CompanyTrustSection />
     <WhyChooseUs />
-    <!-- <PublicWidgetsInfoCards
-      :title="pageData.cardsTitle"
-      :cards="carDeliveryData.cardList"
-    />
-    <PublicWidgetsInfoCostCalculation />
-    <PublicWidgetsDeliveryPurchaseStages
-      :stages="carDeliveryData.purchaseStages"
-    /> -->
     <PublicWidgetsInfoCheckStatusCar />
     <PublicWidgetsAboutPaymentStages />
     <PublicWidgetsAboutWhyChooseUs

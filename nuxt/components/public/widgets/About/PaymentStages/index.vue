@@ -11,7 +11,7 @@
           :key="index"
         >
           <img
-            :src="`./images/car-delivery/payment-stages/payment${index + 1}.png`"
+            :src="`/images/car-delivery/payment-stages/payment${index + 1}.png`"
             style="width: 80px; height: 80px;"
           >
           <b v-text="stage.title" />

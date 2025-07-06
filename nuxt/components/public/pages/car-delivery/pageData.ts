@@ -11,6 +11,28 @@ export const deliveryPages = {
       'Современные технологии и комплектации',
       'Полное сопровождение сделки и доставки',
       'Прохождение всех таможенных процедур под ключ'
+    ],
+    reviews: [
+      {
+        image: '/images/car-delivery/reviews.png',
+        title: 'Подбор авто из Японии | ОТЗЫВ КЛИЕНТА',
+        link: 'https://vk.com/video-123456_1'
+      },
+      {
+        image: '/images/car-delivery/reviews.png',
+        title: 'Подбор авто из Японии | ОТЗЫВ КЛИЕНТА',
+        link: 'https://vk.com/video-123456_1'
+      },
+      {
+        image: '/images/car-delivery/reviews.png',
+        title: 'Подбор авто из Японии | ОТЗЫВ КЛИЕНТА',
+        link: 'https://vk.com/video-123456_1'
+      },
+      {
+        image: '/images/car-delivery/reviews.png',
+        title: 'Подбор авто из Японии | ОТЗЫВ КЛИЕНТА',
+        link: 'https://vk.com/video-123456_1'
+      }
     ]
   },
   korea: {
@@ -25,6 +47,28 @@ export const deliveryPages = {
       'Проверка истории и технического состояния',
       'Фото/видео отчёты',
       'Доставка под ключ без скрытых комиссий'
+    ],
+    reviews: [
+      {
+        image: '/images/car-delivery/reviews.png',
+        title: 'Подбор авто из Японии | ОТЗЫВ КЛИЕНТА',
+        link: 'https://vk.com/video-123456_1'
+      },
+      {
+        image: '/images/car-delivery/reviews.png',
+        title: 'Подбор авто из Японии | ОТЗЫВ КЛИЕНТА',
+        link: 'https://vk.com/video-123456_1'
+      },
+      {
+        image: '/images/car-delivery/reviews.png',
+        title: 'Подбор авто из Японии | ОТЗЫВ КЛИЕНТА',
+        link: 'https://vk.com/video-123456_1'
+      },
+      {
+        image: '/images/car-delivery/reviews.png',
+        title: 'Подбор авто из Японии | ОТЗЫВ КЛИЕНТА',
+        link: 'https://vk.com/video-123456_1'
+      }
     ]
   },
   japan: {
@@ -39,6 +83,28 @@ export const deliveryPages = {
       'Долговечные материалы',
       'Экономичность и экологичность',
       'Широкий выбор моделей и комплектаций'
+    ],
+    reviews: [
+      {
+        image: '/images/car-delivery/reviews.png',
+        title: 'Подбор авто из Японии | ОТЗЫВ КЛИЕНТА',
+        link: 'https://vk.com/video-123456_1'
+      },
+      {
+        image: '/images/car-delivery/reviews.png',
+        title: 'Подбор авто из Японии | ОТЗЫВ КЛИЕНТА',
+        link: 'https://vk.com/video-123456_1'
+      },
+      {
+        image: '/images/car-delivery/reviews.png',
+        title: 'Подбор авто из Японии | ОТЗЫВ КЛИЕНТА',
+        link: 'https://vk.com/video-123456_1'
+      },
+      {
+        image: '/images/car-delivery/reviews.png',
+        title: 'Подбор авто из Японии | ОТЗЫВ КЛИЕНТА',
+        link: 'https://vk.com/video-123456_1'
+      }
     ]
   }
 }

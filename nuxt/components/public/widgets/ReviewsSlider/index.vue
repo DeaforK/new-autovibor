@@ -52,28 +52,14 @@
 </template>
 
 <script setup lang="ts">
-const reviews = [
-  {
-    image: '/images/car-delivery/reviews.png',
-    title: 'Подбор авто с пробегом в Екб | ОТЗЫВ КЛИЕНТА',
-    link: 'https://vk.com/video-123456_1'
-  },
-  {
-    image: '/images/car-delivery/reviews.png',
-    title: 'Подбор авто в Китае | ОТЗЫВ КЛИЕНТА',
-    link: 'https://vk.com/video-123456_2'
-  },
-  {
-    image: '/images/car-delivery/reviews.png',
-    title: 'Подбор из Кореи | ОТЗЫВ КЛИЕНТА',
-    link: 'https://vk.com/video-123456_3'
-  },
-  {
-    image: '/images/car-delivery/reviews.png',
-    title: 'Доставка из Японии | ОТЗЫВ КЛИЕНТА',
-    link: 'https://vk.com/video-123456_4'
-  }
-]
+defineProps<{
+  reviews: {
+    image: string
+    title: string
+    link: string
+  }[]
+}>()
+
 </script>
 
 <style scoped lang="scss">
