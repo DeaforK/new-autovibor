@@ -1,6 +1,9 @@
 <template>
   <div class="container">
-    <PublicWidgetsTopHeroImport :list="pageData.list" :background-image="pageData.backgroundImage">
+    <PublicWidgetsTopHeroImport
+      :list="pageData.list"
+      :background-image="pageData.backgroundImage"
+    >
       <template #title>
         {{ pageData.topHeroTitle }}
       </template>
