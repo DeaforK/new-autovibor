@@ -1,16 +1,16 @@
 <template>
   <div class="container">
     <PublicWidgetsTopHeroImport
-      :list="pageData.list"
-      :background-image="pageData.backgroundImage"
+      :list="pageData.fields.list"
+      :background-image="pageData.fields.backgroundImage"
     >
       <template #title>
-        {{ pageData.topHeroTitle }}
+        {{ pageData.fields.topHeroTitle }}
       </template>
     </PublicWidgetsTopHeroImport>
     <PublicWidgetsInfoStatistics :statistics="importedPageStatistics" />
     <PublicWidgetsCarFilter />
-    <PublicWidgetsReviewsBlock :reviews="pageData.reviews" />
+    <PublicWidgetsReviewsBlock :reviews="pageData.fields.reviews" />
     <PublicWidgetsSection2 />
     <CarCostEstimateSection />
     <CompanyTrustSection />
