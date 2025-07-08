@@ -1,16 +1,11 @@
 <template>
   <div class="container">
-    <PublicWidgetsTopHeroImport
-      :list="pageData.list"
-      :background-image="pageData.backgroundImage"
-    >
+    <PublicWidgetsTopHeroImport :list="pageData.list" :background-image="pageData.backgroundImage">
       <template #title>
         {{ pageData.topHeroTitle }}
       </template>
     </PublicWidgetsTopHeroImport>
-    <PublicWidgetsInfoStatistics
-      :statistics="importedPageStatistics"
-    />
+    <PublicWidgetsInfoStatistics :statistics="importedPageStatistics" />
     <PublicWidgetsCarFilter />
     <PublicWidgetsReviewsBlock :reviews="pageData.reviews" />
     <PublicWidgetsSection2 />
@@ -19,9 +14,7 @@
     <WhyChooseUs />
     <PublicWidgetsInfoCheckStatusCar />
     <PublicWidgetsAboutPaymentStages />
-    <PublicWidgetsAboutWhyChooseUs
-      :points="carDeliveryData.whyChooseUsPoints"
-    />
+    <PublicWidgetsAboutWhyChooseUs :points="carDeliveryData.whyChooseUsPoints" />
     <PublicWidgetsAboutYoutubeChannel />
     <PublicWidgetsInfoConsult />
     <PublicWidgetsAboutRating />
@@ -42,10 +35,41 @@ import WhyChooseUs from '~/components/public/widgets/ReviewsSlider/WhyChooseUs.v
 const { importedPageStatistics } = useInitStore()
 const route = useRoute()
 const country = route.params.country
-const pageData = deliveryPages[country as keyof typeof deliveryPages] || deliveryPages.korea
-useHead({
-  title: pageData.pageTitle
+
+type PageResponse = {
+  page: {
+    title?: string
+    description?: string
+    keywords?: string
+    fields: Record<string, any>
+  } | null
+}
+
+const { data: pageResponse } = await useAsyncData<PageResponse>(`page-${country}`, () =>
+  $fetch(`/api/pages/${country}`)
+)
+
+const pageData = computed(() => {
+  if (pageResponse.value?.page) {
+    return pageResponse.value.page.fields
+  }
+  return deliveryPages[country as keyof typeof deliveryPages] || deliveryPages.korea
 })
+
+useHead(() => ({
+  title: pageResponse.value?.page?.title || 'Автовыбор',
+  meta: [
+    {
+      name: 'description',
+      content: pageResponse.value?.page?.description || ''
+    },
+    {
+      name: 'keywords',
+      content: pageResponse.value?.page?.keywords || ''
+    }
+  ]
+}))
+
 </script>
 
 <style lang="scss" scoped></style>
