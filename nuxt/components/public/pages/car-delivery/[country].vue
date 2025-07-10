@@ -10,7 +10,7 @@
     </PublicWidgetsTopHeroImport>
     <PublicWidgetsInfoStatistics :statistics="importedPageStatistics" />
     <PublicWidgetsCarFilter />
-    <PublicWidgetsReviewsBlock :reviews="pageData.fields.reviews" />
+    <PublicWidgetsReviewsBlock :reviews="shortsPreview" />
     <PublicWidgetsSection2 />
     <CarCostEstimateSection />
     <CompanyTrustSection />
@@ -35,6 +35,32 @@ import PublicWidgetsSection2 from '~/components/public/widgets/ReviewsSlider/Sec
 import CarCostEstimateSection from '~/components/public/widgets/ReviewsSlider/CarCostEstimateSection.vue'
 import CompanyTrustSection from '~/components/public/widgets/ReviewsSlider/CompanyTrustSection.vue'
 import WhyChooseUs from '~/components/public/widgets/ReviewsSlider/WhyChooseUs.vue'
+import { useShortsStore } from '~/components/public/entities/Shorts/model'
+import { type TShortsResponse } from '~/components/public/entities/Shorts/types'
+
+const shortsPreview = ref<
+  {
+    image: string
+    title: string
+    link: string
+  }[]
+>([])
+
+const { getShorts } = useShortsStore()
+
+// Загружаем короткие видео (первые 4)
+const { data: shortsData } = await useAsyncData('shorts-preview', () => getShorts(1))
+
+const preparedShorts = shortsData.value as TShortsResponse
+
+if (preparedShorts) {
+  shortsPreview.value = preparedShorts.rows.map(short => ({
+    image: short.poster,
+    title: short.name,
+    link: short.url // Убедись, что это внешняя ссылка или внутренняя
+  }))
+}
+
 const { importedPageStatistics } = useInitStore()
 const route = useRoute()
 const country = route.params.country
@@ -49,7 +75,7 @@ type PageResponse = {
 }
 
 const { data: pageResponse } = await useAsyncData<PageResponse>(`page-${country}`, () =>
-  $fetch(`/api/pages/${country}`)
+  $fetch(`/api/pages/car-delivery/${country}`)
 )
 
 const pageData = computed(() => {
