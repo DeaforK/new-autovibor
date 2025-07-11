@@ -34,6 +34,10 @@ const openModal = ref(false)
   max-width: 100%;
   margin: 0 auto;
 
+  @media (max-width: 768px) {
+    padding: 40px 16px;
+  }
+
   &__background {
     background: url('/images/car-delivery/bg-car-calc.png') no-repeat center;
     background-size: cover;
@@ -46,10 +50,10 @@ const openModal = ref(false)
     justify-content: center;
 
     @media (max-width: 768px) {
-      padding: 40px 16px;
+      flex-direction: column;
+      padding: 24px 16px 100px;
       border-radius: 20px;
       min-height: auto;
-      flex-direction: column;
     }
   }
 
@@ -66,15 +70,17 @@ const openModal = ref(false)
     white-space: nowrap;
 
     @media (max-width: 768px) {
-      font-size: 14px;
-      padding: 8px 20px;
+      top: 12px;
+      right: 12px;
+      font-size: 12px;
+      padding: 6px 16px;
     }
   }
 
   &__offer {
     position: absolute;
     left: 70px;
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.95);
     width: 100%;
     max-width: 480px;
     padding: 36px 28px;
@@ -86,16 +92,28 @@ const openModal = ref(false)
       font-weight: 700;
       line-height: 120%;
       margin-bottom: 18px;
+
+      @media (max-width: 768px) {
+        font-size: 20px;
+      }
     }
 
     p {
       font-size: 16px;
       line-height: 140%;
       margin-bottom: 24px;
+
+      @media (max-width: 768px) {
+        font-size: 14px;
+      }
     }
 
     @media (max-width: 768px) {
-      padding: 28px 20px;
+      position: static;
+      padding: 24px 16px;
+      margin-top: 40px;
+      border-radius: 20px;
+      background-color: rgba(255, 255, 255, 0.95);
     }
   }
 
@@ -117,7 +135,9 @@ const openModal = ref(false)
     @media (max-width: 768px) {
       font-size: 15px;
       padding: 10px 20px;
+      width: 100%;
     }
   }
 }
+
 </style>

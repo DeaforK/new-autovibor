@@ -73,8 +73,14 @@
   padding: 60px 20px;
   margin: 25px 48px;
 
+  @media (max-width: 768px) {
+    padding: 40px 16px;
+    margin: 20px;
+    border-radius: 24px;
+  }
+
   &__wrapper {
-    max-inline-size: 1200px;
+    max-width: 1200px;
     margin: 0 auto;
   }
 
@@ -82,11 +88,11 @@
     text-align: center;
     font-size: 28px;
     font-weight: 700;
-    margin-block-end: 40px;
+    margin-bottom: 40px;
 
-    @media (max-inline-size: 768px) {
+    @media (max-width: 768px) {
       font-size: 20px;
-      margin-block-end: 20px;
+      margin-bottom: 24px;
     }
   }
 
@@ -99,19 +105,19 @@
      & > :nth-child(2) {
       margin-inline-end: 76px;
 
-      @media (max-inline-size: 900px) {
+      @media (max-width: 900px) {
         margin-inline-end: 0;
       }
     }
     & > :nth-child(3) {
       margin-inline-start: 76px;
 
-      @media (max-inline-size: 900px) {
+      @media (max-width: 900px) {
         margin-inline-start: 0;
       }
     }
 
-    @media (max-inline-size: 900px) {
+    @media (max-width: 900px) {
       grid-template-columns: 1fr;
     }
   }
@@ -124,43 +130,41 @@
 
   &__block--image {
     position: relative;
-    color: white;
     font-size: 14px;
-    border-radius: 20px;
-    overflow: hidden;
+    color: white;
 
     img {
-      inline-size: 100%;
-      block-size: 100%;
+      width: 100%;
+      height: 220px;
       object-fit: cover;
       display: block;
       border-radius: 20px;
+
+      @media (max-width: 768px) {
+        height: 180px;
+      }
     }
 
-    // Градиент сверху вниз
     &::after {
       content: '';
       position: absolute;
-      inset-block-start: 0;
-      inset-inline-start: 0;
-      block-size: 100%;
-      inline-size: 100%;
-      background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4), transparent 30%, transparent 60%, rgba(0, 0, 0, 0.6));
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3) 30%, rgba(0, 0, 0, 0.7));
       border-radius: 20px;
-      z-index: 10;
+      z-index: 1;
     }
 
     p {
       position: absolute;
-      inset-block-end: 16px;
-      inset-inline-start: 16px;
-      inset-inline-end: 16px;
+      bottom: 16px;
+      left: 16px;
+      right: 16px;
       margin: 0;
-      font-size: 14px;
-      z-index: 11;
-      background: none;
-      padding: 0;
-      color: #fff;
+      font-size: 13px;
+      z-index: 2;
     }
   }
 
@@ -182,7 +186,7 @@
         display: block;
         font-size: 20px;
         color: #e15a2b;
-        margin-block-end: 6px;
+        margin-bottom: 6px;
       }
 
       span {
@@ -191,7 +195,7 @@
       }
     }
 
-    @media (max-inline-size: 768px) {
+    @media (max-width: 768px) {
       grid-template-columns: 1fr;
     }
   }
@@ -205,28 +209,32 @@
     .rating {
       display: flex;
       flex-direction: column;
-      justify-content: space-between;
-      block-size: 100%;
+      justify-content: center;
+      align-items: center;
 
       &__value {
-        font-size: 32px;
+        font-size: 28px;
         font-weight: 700;
-        margin-block-end: 12px;
+        margin-bottom: 12px;
       }
 
-      &__desc p {
-        margin: 0;
-        line-height: 1.4;
-      }
+      &__desc {
+        text-align: center;
 
-      .text-small {
-        font-size: 13px;
-        opacity: 0.9;
-        margin-block-start: 10px;
+        p {
+          margin: 0;
+          line-height: 1.4;
+        }
+
+        .text-small {
+          font-size: 13px;
+          opacity: 0.9;
+          margin-top: 10px;
+        }
       }
 
       .yandex-btn {
-        margin-block-start: 20px;
+        margin-top: 20px;
         background: white;
         color: black;
         font-weight: 600;
@@ -243,4 +251,5 @@
     }
   }
 }
+
 </style>

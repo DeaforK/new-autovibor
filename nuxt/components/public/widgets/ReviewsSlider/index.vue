@@ -5,51 +5,38 @@
         Отзывы наших клиентов
       </h2>
 
-      <Swiper
-        :breakpoints="{
-          1330: { slidesPerView: 4 },
-          1024: { slidesPerView: 3 },
-          768: { slidesPerView: 2 },
-          0: { slidesPerView: 1 }
-        }"
-        :space-between="30"
-        :navigation="true"
-        :loop="false"
-        class="reviews__swiper"
-      >
-        <SwiperSlide
-          v-for="(card, i) in reviews"
+      <div class="reviews__grid">
+        <div
+          v-for="(video, i) in reviews"
           :key="i"
+          class="reviews__video"
         >
-          <div class="review-card">
-            <img
-              :src="card.image"
-              alt="preview"
-              class="review-card__image"
-            >
-            <div class="review-card__footer">
-              <p class="review-card__desc">
-                {{ card.title }}
-              </p>
-              <PublicSharedUiBlackButton
-                :href="card.link"
-                target="_blank"
-              >
-                Смотреть клип в VK
-              </PublicSharedUiBlackButton>
-            </div>
+          <div class="spinner">
+            <q-spinner
+              color="primary"
+              size="3em"
+            />
           </div>
-        </SwiperSlide>
-      </Swiper>
+          <iframe
+            width="300"
+            height="515"
+            loading="lazy"
+            :src="video.link"
+            frameborder="0"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+          />
+        </div>
+      </div>
 
       <div class="reviews__button">
-        <PublicSharedUiPrimaryButton>
+        <PublicSharedUiPrimaryButton @click="navigateTo('/about/reviews')">
           Показать все отзывы
         </PublicSharedUiPrimaryButton>
       </div>
     </div>
   </section>
 </template>
+
 
 <script setup lang="ts">
 defineProps<{
@@ -80,16 +67,32 @@ defineProps<{
     margin-bottom: 40px;
   }
 
-  &__swiper {
-    --swiper-navigation-color: #e15a2b;
-    --swiper-navigation-size: 22px;
+  &__grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+  }
 
-    .swiper-button-prev,
-    .swiper-button-next {
-      background: white;
-      border-radius: 50%;
-      padding: 15px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  &__video {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    iframe {
+      z-index: 4;
+    }
+
+    .spinner {
+      position: absolute;
+      z-index: 3;
+      left: 0;
+      right: 0;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
   }
 
@@ -100,33 +103,4 @@ defineProps<{
   }
 }
 
-.review-card {
-  background: white;
-  border-radius: 20px;
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  height: 100%;
-
-  &__image {
-    width: 100%;
-    object-fit: cover;
-    aspect-ratio: 9 / 16;
-  }
-
-  &__footer {
-    padding: 16px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 12px;
-  }
-
-  &__desc {
-    font-size: 14px;
-    text-align: center;
-    font-weight: 500;
-  }
-}
 </style>

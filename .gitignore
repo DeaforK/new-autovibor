@@ -9,3 +9,4 @@ postgres
 /certs
 
 /caddy/caddy-data
+nuxt/components/public/widgets/ReviewsSlider/PageDynamicContent.vue

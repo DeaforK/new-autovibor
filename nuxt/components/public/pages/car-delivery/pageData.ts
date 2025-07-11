@@ -17,26 +17,27 @@ export const deliveryPages = {
       ],
       reviews: [
         {
-          image: '/images/car-delivery/reviews.png',
-          title: 'Подбор авто из Японии | ОТЗЫВ КЛИЕНТА',
-          link: 'https://vk.com/video-123456_1'
+          image: 'https://i.imgur.com/abcdef1.png',
+          title: 'Отзыв клиента – Подбор авто из Японии',
+          link: 'https://vk.com/video_ext.php?oid=-129549043&id=456239677'
         },
         {
-          image: '/images/car-delivery/reviews.png',
-          title: 'Подбор авто из Японии | ОТЗЫВ КЛИЕНТА',
-          link: 'https://vk.com/video-123456_1'
+          image: 'https://i.imgur.com/abcdef2.png',
+          title: 'Отзыв клиента – Подбор авто из Японии',
+          link: 'https://vk.com/video_ext.php?oid=-129549043&id=456239694'
         },
         {
-          image: '/images/car-delivery/reviews.png',
-          title: 'Подбор авто из Японии | ОТЗЫВ КЛИЕНТА',
-          link: 'https://vk.com/video-123456_1'
+          image: 'https://i.imgur.com/abcdef3.png',
+          title: 'Отзыв клиента – Подбор авто из Японии',
+          link: 'https://vk.com/video_ext.php?oid=-129549043&id=456239708'
         },
         {
-          image: '/images/car-delivery/reviews.png',
-          title: 'Подбор авто из Японии | ОТЗЫВ КЛИЕНТА',
-          link: 'https://vk.com/video-123456_1'
+          image: 'https://i.imgur.com/abcdef4.png',
+          title: 'Отзыв клиента – Подбор авто из Японии',
+          link: 'https://vk.com/video_ext.php?oid=-129549043&id=456239713'
         }
       ]
+
     }
   },
 
@@ -58,26 +59,27 @@ export const deliveryPages = {
       ],
       reviews: [
         {
-          image: '/images/car-delivery/reviews.png',
-          title: 'Подбор авто из Кореи | ОТЗЫВ КЛИЕНТА',
-          link: 'https://vk.com/video-123456_1'
+          image: 'https://i.imgur.com/abcdef1.png', // вставь постер или кадр из видео
+          title: 'Отзыв клиента – Подбор авто из Японии',
+          link: 'https://vk.com/video_ext.php?oid=-129549043&id=456239677'
         },
         {
-          image: '/images/car-delivery/reviews.png',
-          title: 'Подбор авто из Кореи | ОТЗЫВ КЛИЕНТА',
-          link: 'https://vk.com/video-123456_1'
+          image: 'https://i.imgur.com/abcdef2.png',
+          title: 'Отзыв клиента – Подбор авто из Японии',
+          link: 'https://vk.com/video_ext.php?oid=-129549043&id=456239694'
         },
         {
-          image: '/images/car-delivery/reviews.png',
-          title: 'Подбор авто из Кореи | ОТЗЫВ КЛИЕНТА',
-          link: 'https://vk.com/video-123456_1'
+          image: 'https://i.imgur.com/abcdef3.png',
+          title: 'Отзыв клиента – Подбор авто из Японии',
+          link: 'https://vk.com/video_ext.php?oid=-129549043&id=456239708'
         },
         {
-          image: '/images/car-delivery/reviews.png',
-          title: 'Подбор авто из Кореи | ОТЗЫВ КЛИЕНТА',
-          link: 'https://vk.com/video-123456_1'
+          image: 'https://i.imgur.com/abcdef4.png',
+          title: 'Отзыв клиента – Подбор авто из Японии',
+          link: 'https://vk.com/video_ext.php?oid=-129549043&id=456239713'
         }
       ]
+
     }
   },
 
@@ -99,24 +101,24 @@ export const deliveryPages = {
       ],
       reviews: [
         {
-          image: '/images/car-delivery/reviews.png',
-          title: 'Подбор авто из Китая | ОТЗЫВ КЛИЕНТА',
-          link: 'https://vk.com/video-123456_1'
+          image: 'https://i.imgur.com/abcdef1.png', // вставь постер или кадр из видео
+          title: 'Отзыв клиента – Подбор авто из Японии',
+          link: 'https://vk.com/video_ext.php?oid=-129549043&id=456239677'
         },
         {
-          image: '/images/car-delivery/reviews.png',
-          title: 'Подбор авто из Китая | ОТЗЫВ КЛИЕНТА',
-          link: 'https://vk.com/video-123456_1'
+          image: 'https://i.imgur.com/abcdef2.png',
+          title: 'Отзыв клиента – Подбор авто из Японии',
+          link: 'https://vk.com/video_ext.php?oid=-129549043&id=456239694'
         },
         {
-          image: '/images/car-delivery/reviews.png',
-          title: 'Подбор авто из Китая | ОТЗЫВ КЛИЕНТА',
-          link: 'https://vk.com/video-123456_1'
+          image: 'https://i.imgur.com/abcdef3.png',
+          title: 'Отзыв клиента – Подбор авто из Японии',
+          link: 'https://vk.com/video_ext.php?oid=-129549043&id=456239708'
         },
         {
-          image: '/images/car-delivery/reviews.png',
-          title: 'Подбор авто из Китая | ОТЗЫВ КЛИЕНТА',
-          link: 'https://vk.com/video-123456_1'
+          image: 'https://i.imgur.com/abcdef4.png',
+          title: 'Отзыв клиента – Подбор авто из Японии',
+          link: 'https://vk.com/video_ext.php?oid=-129549043&id=456239713'
         }
       ]
     }

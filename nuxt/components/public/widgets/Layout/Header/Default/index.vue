@@ -62,7 +62,8 @@
               class="header_default__container__contacts__phone"
               :href="`tel:${data.phoneNumber}`"
               target="_blank"
-            >{{ data.phoneNumber }}</a>
+            >{{
+              data.phoneNumber }}</a>
           </address>
         </div>
       </nav>
@@ -85,6 +86,7 @@
           <li
             v-for="service in services"
             :key="service.title"
+            class="has-dropdown"
           >
             <nuxt-link
               :to="service.link"
@@ -92,6 +94,21 @@
             >
               {{ service.title }}
             </nuxt-link>
+
+            <!-- Подменю, если есть children -->
+            <ul
+              v-if="service.children"
+              class="dropdown"
+            >
+              <li
+                v-for="child in service.children"
+                :key="child.link"
+              >
+                <nuxt-link :to="child.link">
+                  {{ child.title }}
+                </nuxt-link>
+              </li>
+            </ul>
           </li>
         </ul>
       </div>
@@ -146,7 +163,12 @@ const services = [
   },
   {
     title: 'Доставка авто из-за рубежа',
-    link: '/car-delivery'
+    link: '/car-delivery',
+    children: [
+      { title: 'Доставка авто из Китая', link: '/car-delivery/china' },
+      { title: 'Доставка авто из Южной Кореи', link: '/car-delivery/korea' },
+      { title: 'Доставка авто из Японии', link: '/car-delivery/japan' }
+    ]
   },
   {
     title: 'Наши работы',
@@ -196,6 +218,7 @@ const filteredSocial = computed(() => {
         font-weight: 500;
         line-height: 14px;
         width: 99px;
+
         @media (max-width: 1400px) {
           display: none;
         }
@@ -210,6 +233,7 @@ const filteredSocial = computed(() => {
         display: flex;
         justify-content: flex-start;
         margin-bottom: 14px;
+
         &__menu {
           display: flex;
           flex-direction: row;
@@ -233,18 +257,23 @@ const filteredSocial = computed(() => {
             border: 1px solid transparent;
             white-space: nowrap;
             transition: border-color 0.2s ease-in-out;
+
             @include more-than-desktop-big {
               font-size: 14px;
             }
-            & > a {
+
+            &>a {
               @include reset-link;
             }
+
             .drop_items {
               display: none;
               padding-top: 15px;
               position: absolute;
+              z-index: 10;
               left: 0;
               top: calc(100%);
+
               ul {
                 @include reset-list;
                 background: $primary;
@@ -253,10 +282,12 @@ const filteredSocial = computed(() => {
                 flex-direction: column;
                 gap: 15px;
                 padding: 10px;
+
                 li {
                   a {
                     @include reset-link;
                     font-weight: 500;
+
                     &:hover {
                       text-decoration: underline;
                     }
@@ -264,7 +295,9 @@ const filteredSocial = computed(() => {
                 }
               }
             }
+
             &:hover {
+
               // border-bottom: 1px solid #fff;
               .drop_items {
                 display: block;
@@ -354,14 +387,56 @@ const filteredSocial = computed(() => {
             }
           }
         }
+
+        .has-dropdown {
+          position: relative;
+
+          .dropdown {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 10px 0;
+            display: none;
+
+            li {
+              padding: 6px 16px;
+              margin: 2px 0;
+              border-radius: 12px;
+              transition: background-color 0.2s ease-in-out;
+
+              a {
+                @include reset-link;
+                display: block;
+                padding: 6px 12px;
+                border-radius: 12px;
+                font-size: 14px;
+                white-space: nowrap;
+
+                &:hover {
+                  background-color: #e15a2b;
+                  color: #fff;
+                }
+              }
+            }
+          }
+
+          &:hover .dropdown {
+            display: block;
+          }
+        }
+
       }
     }
   }
+
   .social {
     margin-right: 15px;
     display: flex;
     justify-content: center;
     align-items: center;
+
     @include more-than-small-mobile {
       flex-direction: row;
     }
@@ -391,6 +466,7 @@ const filteredSocial = computed(() => {
           height: 12px;
           margin-right: 7px;
         }
+
         margin-bottom: 3px;
 
         a {
