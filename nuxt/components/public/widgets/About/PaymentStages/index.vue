@@ -7,7 +7,7 @@
 
       <ul class="payment-stages__list">
         <li
-          v-for="(stage, index) in stages"
+          v-for="(stage, index) in actualStages"
           :key="index"
         >
           <img
@@ -23,7 +23,16 @@
 </template>
 
 <script setup lang="ts">
-import { stages } from './data'
+import { stages as defaultStages } from './data'
+
+const props = defineProps<{
+  stages?: {
+    title: string
+    body: string
+  }[]
+}>()
+
+const actualStages = computed(() => props.stages ?? defaultStages)
 </script>
 
 <style lang="scss" scoped>
@@ -36,7 +45,7 @@ import { stages } from './data'
   margin-top: 30px;
 
   @include more-than-small-mobile {
-    padding: 30px 0;
+    padding: 30px 20px;
     padding-bottom: 45px;
     width: 100%;
   }
@@ -58,6 +67,7 @@ import { stages } from './data'
       line-height: 36px;
       margin-top: 15px;
     }
+
     @include more-than-mobile {
       font-size: 32px;
       line-height: 40px;
@@ -71,6 +81,7 @@ import { stages } from './data'
     // align-items: center;
     margin-top: 30px;
     gap: 25px;
+
     @include more-than-small-mobile {
       grid-template-columns: repeat(1, 1fr);
     }
@@ -82,6 +93,7 @@ import { stages } from './data'
     @include more-than-laptop {
       grid-template-columns: repeat(4, 1fr);
     }
+
     li {
       display: flex;
       flex-direction: column;

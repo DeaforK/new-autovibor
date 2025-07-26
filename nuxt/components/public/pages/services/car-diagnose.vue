@@ -2,10 +2,11 @@
   <div class="page_container">
     <PublicWidgetsTopHeroCarDiagnose :video="true">
       <template #title>
-        Комплексная выездная диагностика авто перед покупкой
+        Выездная диагностика автомобиля в Екатеринбурге – проверка перед покупкой с выездом к вам
       </template>
       <template #body>
-        Приедем за 1 час, проверим, предоставим экспертное заключение
+        Услуги диагностики автомобиля с выездом и вниманием к каждой детали в Екатеринбурге и Свердловской области от
+        компании «Автовыбор».
       </template>
     </PublicWidgetsTopHeroCarDiagnose>
     <div class="page_container__reports">
@@ -18,9 +19,7 @@
         юридическую проверку вместе с технической и компьютерной диагностикой автомобиля.
       </p>
       <div class="page_container__reports__hero">
-        <PublicSharedUiBlackButton
-          to="/reports"
-        >
+        <PublicSharedUiBlackButton to="/reports">
           Отчеты автомобилей
         </PublicSharedUiBlackButton>
       </div>
@@ -70,15 +69,34 @@
         </div>
       </div>
       <br>
-      <PublicSharedUiBlackButton
-        to="/reports"
-      >
+      <PublicSharedUiBlackButton to="/reports">
         Смотреть отчеты
       </PublicSharedUiBlackButton>
-      <h2 style="font-size: 27px; line-height: 39px; margin-bottom: 60px; max-width: 80%">
-        Для иногородних или занятых предоставляем полный отчет на любой мессенджер или личный email
-        о проверке автомобиля
-      </h2>
+      <div class="page_container__outcity__info">
+        <h5 class="page_container__outcity__info__title">
+          Диагностика для иногородних клиентов – эксперты проверят авто за вас
+        </h5>
+        <p class="page_container__outcity__info__text">
+          Выездная диагностика авто в Екатеринбурге – востребованная услуга среди покупателей из Свердловской области и
+          других регионов РФ.
+        </p>
+        <p class="page_container__outcity__info__text">
+          По вашей заявке специалист выезжает на осмотр машины для:
+          <br>— проведения компьютерной диагностики автомобиля с выездом - тестируется исправность всех основных узлов и
+          механизмов ТС;
+          <br>— проверки юридической чистоты документов;
+          <br>— выявления скрытых признаков ДТП.
+        </p>
+        <p class="page_container__outcity__info__text">
+          Диагностика автомобиля с выездом к клиенту также позволяет получить представление о состоянии салона и кузова:
+          наличие ржавчины, битых и неисправных элементов, факты покраски и пр.
+        </p>
+        <p class="page_container__outcity__info__text">
+          Вам не придется никуда ехать. Полная и соответствующая действительности информация по результатам
+          выездной проверки автомобиля будет зафиксирована в фото и видеоотчете.
+          Мы работаем на совесть и готовы нести финансовую ответственность за реализуемые нами услуги.
+        </p>
+      </div>
     </div>
     <PublicWidgetsCommonDiagnoseForm />
     <div class="page_container__agreement-cost">
@@ -104,29 +122,35 @@
       </div>
     </div>
     <div class="page_container__points">
-      <h2>Несколько причин, по которым нужно проверять автомобиль</h2>
+      <h2>5 причин сделать выездную диагностику перед покупкой авто:</h2>
       <ul>
         <li>
-          <b>Многие продавцы </b>проводят предпродажную подготовку. Некоторым удается скрыть 80-90%
-          дефектов, которые заметит только профессионал с опытом работы.
+          <b>Выявление скрытых дефектов.</b> Как правило, продавцы не спешат честно рассказывать о состоянии ТС.
+          В ходе компьютерной диагностики автомобиля с выездом в Екатеринбурге мы гарантированно обнаружим проблемы и
+          неисправности,
+          которые попросту не заметит непрофессионал.
         </li>
         <li>
-          <b>Распространенная проблема </b>– чрезмерный износ деталей, который покупатель недооценил
-          при проверке. Есть риск попасть на ремонт <br>до 300 000 руб. Полная компьютерная
-          диагностика облегчает обнаружение.
+          Объективная оценка. Независимый эксперт проведет диагностику авто на выезде и представит честное заключение о
+          состоянии машины,
+          чтобы вы могли принять взвешенное решение о покупке.
         </li>
         <li>
-          <b>Самые строгие проверки</b> следует проводить, имея дело с перекупами. Узнать, продает
-          ли автомобиль реальный владелец или перекуп, всегда может профессионал.
+          Проверка юридической чистоты и истории владения. Специалист, который выполняет выездную проверку автомобиля
+          перед
+          покупкой,
+          заглянет под капот, сверит VIN-номера, посмотрит документы и пробег.
         </li>
         <li>
-          <b>Далеко не все битые авто </b>нужно списывать со счетов. Какие повреждения допустимы, и
-          даже нужны, чтобы снизить цену на торге, – расскажет эксперт после проведенной
-          автодиагностики и проверки.
+          Адекватный торг.
+          В ходе осмотра и проверки эксперты выявят недочеты и спорные моменты, на которые можно опираться, чтобы
+          уменьшить
+          сумму сделки.
         </li>
         <li>
-          <b>Даже сегодня </b>можно легко наткнуться на поддельный ПТС. Чтобы не купить ворованное
-          авто или с обременениями, нужно уметь отличать оригинал ПТС от подделки.
+          Выгодные цены на диагностику автомобиля с выездом. Стоимость наших услуг в разы меньше того, что придется
+          потратить на устранение неполадок,
+          которые вы попросту не увидите при самостоятельном осмотре машины перед покупкой.
         </li>
       </ul>
       <PublicSharedUiPrimaryButton @click="navigateTo('/')">
@@ -134,7 +158,7 @@
       </PublicSharedUiPrimaryButton>
     </div>
     <div class="page_container__packages">
-      <h2>что входит в выездную диагностику</h2>
+      <h2>Что входит в выездную диагностику</h2>
       <div class="page_container__packages__container">
         <div class="page_container__packages__container__left">
           <h3>В комплексную диагностику входит</h3>
@@ -191,15 +215,16 @@
 
 <script setup lang="ts">
 useHead({
-  title: 'Выездная диагностика авто'
+  title: 'Выездная диагностика автомобиля перед покупкой в Екатеринбурге — Автовыбор',
+  meta: [
+    { name: 'description', content: 'Тщательная выездная диагностика автомобиля перед покупкой. Отчёт о скрытых дефектах, помощь в торге и безопасная сделка.' }
+  ]
 })
 
 const showModal = ref(false)
 </script>
 
 <style lang="scss" scoped>
-
-
 .page_container {
   h2 {
     font-weight: bold;
@@ -259,9 +284,53 @@ const showModal = ref(false)
     align-items: center;
     gap: 20px;
     margin: 0 auto;
+
     h2 {
       margin-bottom: 0;
     }
+
+    &__info {
+      padding: 30px 20px;
+      margin: 0 auto;
+      max-width: 1200px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+
+      @include more-than-mobile {
+        padding: 40px 40px;
+      }
+
+      @include more-than-tablet {
+        padding: 60px;
+        gap: 25px;
+      }
+
+      &__title {
+        font-size: 20px;
+        font-weight: 600;
+        text-align: center;
+        line-height: 1.4;
+
+        @include more-than-tablet {
+          font-size: 24px;
+        }
+      }
+
+      &__text {
+        font-size: 16px;
+        line-height: 165%;
+        color: #333;
+        text-align: left;
+
+        @include more-than-tablet {
+          font-size: 18px;
+          max-width: 90%;
+          margin: 0 auto;
+        }
+      }
+    }
+
     p {
       text-align: left;
       max-width: 100%;
@@ -280,6 +349,7 @@ const showModal = ref(false)
       ul {
         padding-left: 30px;
         padding-bottom: 20px;
+
         li {
           font-size: 16px;
         }
@@ -322,6 +392,7 @@ const showModal = ref(false)
       justify-content: center;
       align-items: center;
       gap: 20px;
+
       @include more-than-mobile {
         flex-direction: row;
       }
@@ -354,6 +425,7 @@ const showModal = ref(false)
     align-items: center;
     margin: 30px auto;
     margin-bottom: 80px;
+
     @include more-than-mobile {
       max-width: 80%;
     }
@@ -375,6 +447,7 @@ const showModal = ref(false)
         align-self: flex-start;
         justify-self: flex-start;
         margin-left: 10px;
+
         @include more-than-tablet {
           max-width: 60%;
           margin: 0 auto;
@@ -395,12 +468,14 @@ const showModal = ref(false)
     gap: 30px;
     padding-bottom: 60px;
     margin-bottom: 40px;
+
     &__container {
       display: flex;
       flex-direction: column;
       align-items: center;
       gap: 40px;
       padding-top: 20px;
+
       @include more-than-mobile {
         justify-content: space-between;
         align-items: flex-start;
@@ -410,23 +485,28 @@ const showModal = ref(false)
         margin-bottom: 40px;
         flex-direction: row;
       }
+
       h3 {
         font-weight: 600;
         font-size: 24px;
         line-height: 29px;
         text-align: center;
       }
+
       &__left {
         max-width: 80%;
         padding: 40px 20px;
         background-color: white;
         color: black;
         border-radius: 40px;
+
         @include more-than-mobile {
           max-width: 50%;
         }
+
         ul {
           padding-top: 20px;
+
           li {
             padding: 10px 0;
             font-size: 16px;
@@ -435,6 +515,7 @@ const showModal = ref(false)
           }
         }
       }
+
       &__right {
         max-width: 80%;
         background-color: white;
@@ -442,14 +523,17 @@ const showModal = ref(false)
         border-radius: 40px;
         color: black;
         height: max-content;
+
         @include more-than-mobile {
           max-width: 50%;
         }
+
         ul {
           @include more-than-tablet {
             padding-left: 30px;
             padding-top: 20px;
           }
+
           li {
             padding: 10px 0;
             font-size: 16px;

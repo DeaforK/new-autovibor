@@ -62,7 +62,7 @@
         </a>
         <a
           class="secondary_container__wrapper-last"
-          href="/"
+          href="/privacy-policy"
         >
           <p>
             Правовая информация

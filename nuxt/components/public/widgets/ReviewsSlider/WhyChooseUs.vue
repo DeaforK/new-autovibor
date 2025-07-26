@@ -85,6 +85,7 @@ const benefits = [
     font-weight: 700;
     text-align: center;
     margin-bottom: 12px;
+    line-height: 1.2;
   }
 
   &__subtitle {
@@ -126,6 +127,7 @@ const benefits = [
       font-size: 18px;
       font-weight: 700;
       margin-bottom: 10px;
+      line-height: 1.2;
     }
 
     p {

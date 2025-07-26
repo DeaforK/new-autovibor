@@ -61,6 +61,24 @@
           </SwiperSlide>
         </Swiper>
       </div>
+      <div class="price_block__container__info">
+        <h3>Авто подбор автомобиля за минуты — без рисков</h3>
+        <p>
+          У нас есть собственная база предложений от надёжных автосалонов Екатеринбурга. Благодаря этому авто подбор
+          автомобиля под ваш запрос занимает минимум времени — уже в день обращения вы можете получить список подходящих
+          машин.
+        </p>
+        <p>
+          Мы ежедневно мониторим:
+          <br>— региональные и федеральные распродажи,
+          <br>— акции дилеров,
+          <br>— закрытые объявления, недоступные обычным пользователям.
+        </p>
+        <p>
+          С нашей помощью в подборе автомобиля вы находите оптимальный вариант быстро, безопасно и с максимальной
+          выгодой.
+        </p>
+      </div>
     </div>
   </div>
 
@@ -74,8 +92,6 @@ const showModal = ref(false)
 </script>
 
 <style lang="scss" scoped>
-
-
 .price_block {
   background: url('/images/Background_price.png') no-repeat center;
   background-size: cover;
@@ -109,6 +125,7 @@ const showModal = ref(false)
       color: white;
       text-align: center;
       margin-bottom: 30px;
+
       @include more-than-tablet {
         max-width: 60%;
         margin: 30px auto;
@@ -120,6 +137,7 @@ const showModal = ref(false)
       margin: 0 auto;
       --swiper-navigation-color: #e15a2b;
       --swiper-navigation-size: 15px;
+
       .swiper-button-next,
       .swiper-button-prev {
         @include more-than-mobile {
@@ -211,6 +229,36 @@ const showModal = ref(false)
         }
       }
     }
+
+    &__info {
+      margin-top: 40px;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 20px;
+      padding: 30px 20px;
+      color: white;
+      font-size: 16px;
+      line-height: 170%;
+      backdrop-filter: blur(5px);
+
+      @include more-than-tablet {
+        max-width: 800px;
+        margin: 40px auto 0;
+        padding: 40px;
+        font-size: 18px;
+      }
+
+      h3 {
+        font-size: 24px;
+        font-weight: bold;
+        margin-bottom: 20px;
+        text-align: center;
+      }
+
+      p {
+        margin-bottom: 16px;
+      }
+    }
+
   }
 }
 </style>

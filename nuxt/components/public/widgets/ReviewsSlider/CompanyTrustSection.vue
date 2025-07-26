@@ -2,7 +2,7 @@
   <section class="company-trust">
     <div class="company-trust__wrapper">
       <h2 class="company-trust__title">
-        Автовыбор – надёжный партнёр по доставке автомобилей из Японии
+        {{ title || 'Автовыбор – надёжный партнёр по доставке автомобилей из Японии' }}
       </h2>
 
       <div class="company-trust__grid">
@@ -43,19 +43,30 @@
         <!-- Оценка -->
         <div class="company-trust__block company-trust__block--rating">
           <div class="rating">
-            <div class="rating__value">
-              5,0 ★★★★★
+            <div class="rating__left">
+              <div class="rating__score">
+                5,0
+              </div>
+              <div class="rating__stars">
+                ★★★★★
+              </div>
+              <div class="rating__label">
+                оценка компании<br>на сервисах Яндекса
+              </div>
             </div>
-            <div class="rating__desc">
-              <p>оценка компании<br>на сервисах Яндекса</p>
-              <p class="text-small">
+            <div class="rating__right">
+              <p class="rating__text">
                 Отзывы реальных клиентов расскажут<br>
                 о нашей работе лучше, чем мы
               </p>
+              <a
+                href="https://yandex.ru/maps/org/avtovybor/212881395529/reviews/?ll=60.553061%2C56.776473&z=16"
+                class="yandex-btn"
+                target="_blank"
+              >
+                Читать отзывы на Яндексе
+              </a>
             </div>
-            <button class="yandex-btn">
-              Читать отзывы на Яндексе
-            </button>
           </div>
         </div>
       </div>
@@ -64,6 +75,9 @@
 </template>
 
 <script setup lang="ts">
+defineProps<{
+  title?: string
+}>()
 </script>
 
 <style scoped lang="scss">
@@ -89,6 +103,7 @@
     font-size: 28px;
     font-weight: 700;
     margin-bottom: 40px;
+    line-height: 1.2;
 
     @media (max-width: 768px) {
       font-size: 20px;
@@ -102,14 +117,15 @@
     gap: 20px;
 
     // "Лесенка" — отступ слева у чётных элементов второй строки
-     & > :nth-child(2) {
+    &> :nth-child(2) {
       margin-inline-end: 76px;
 
       @media (max-width: 900px) {
         margin-inline-end: 0;
       }
     }
-    & > :nth-child(3) {
+
+    &> :nth-child(3) {
       margin-inline-start: 76px;
 
       @media (max-width: 900px) {
@@ -201,55 +217,67 @@
   }
 
   &__block--rating {
-    background: #e15a2b;
+    background: #de5b2a;
     color: white;
-    padding: 30px 20px;
-    border-radius: 20px;
+    padding: 40px 30px;
+    border-radius: 24px;
 
     .rating {
       display: flex;
-      flex-direction: column;
-      justify-content: center;
+      justify-content: space-between;
       align-items: center;
+      gap: 40px;
 
-      &__value {
-        font-size: 28px;
-        font-weight: 700;
-        margin-bottom: 12px;
+      @media (max-width: 768px) {
+        flex-direction: column;
+        align-items: flex-start;
       }
 
-      &__desc {
-        text-align: center;
+      &__left {
+        flex-shrink: 0;
 
-        p {
-          margin: 0;
-          line-height: 1.4;
+        .rating__score {
+          font-size: 64px;
+          font-weight: 800;
+          line-height: 1;
         }
 
-        .text-small {
-          font-size: 13px;
-          opacity: 0.9;
-          margin-top: 10px;
+        .rating__stars {
+          font-size: 32px;
+          margin: 4px 0;
+        }
+
+        .rating__label {
+          font-size: 20px;
+          font-weight: 700;
         }
       }
 
-      .yandex-btn {
-        margin-top: 20px;
-        background: white;
-        color: black;
-        font-weight: 600;
-        border: none;
-        border-radius: 25px;
-        padding: 12px 20px;
-        cursor: pointer;
-        transition: background 0.3s;
+      &__right {
+        flex: 1;
 
-        &:hover {
-          background: #f2f2f2;
+        .rating__text {
+          font-size: 12px;
+          margin-bottom: 20px;
+        }
+
+        .yandex-btn {
+          background: white;
+          color: black;
+          font-weight: 700;
+          padding: 16px 24px;
+          border-radius: 40px;
+          text-decoration: none;
+          font-size: 14px;
+          display: inline-block;
+          transition: background 0.3s;
+
+          &:hover {
+            background: #f0f0f0;
+          }
         }
       }
     }
   }
 }
-
 </style>

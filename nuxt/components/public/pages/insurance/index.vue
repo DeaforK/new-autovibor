@@ -2,7 +2,12 @@
   <div class="main_container">
     <PublicWidgetsTopHeroSection :video="true">
       <template #title>
-        Автострахование в Екатеринбурге
+        Страховка на машину в Екатеринбурге - плюсы оформления ОСАГО и КАСКО с «Автовыбором»
+      </template>
+      <template #body>
+        Страховку на машину: ОСАГО и КАСКО можно оформить онлайн, не выходя из дома. Отметить нужные опции,
+        рассчитать скидку и продлить полис страхования авто в пару кликов – команда «Автовыбор» поможет в
+        оформлении всех документов на удобных и выгодных для вас условиях.
       </template>
     </PublicWidgetsTopHeroSection>
 
@@ -31,6 +36,7 @@
 
     <div class="main_container__info_section">
       <h1>{{ content.serviceSteps.title }}</h1>
+      <h5>{{ content.serviceSteps.subTitle }}</h5>
       <div class="main_container__info_section__container">
         <div
           v-for="item in content.serviceSteps.content"
@@ -53,13 +59,14 @@
 import { content } from './data'
 
 useHead({
-  title: 'Страхование'
+  title: 'Оформить ОСАГО, КАСКО в Екатеринбурге под ключ  — автострахование с “Автовыбор”',
+  meta: [
+    { name: 'description', content: 'Автострахование в Екатеринбурге без переплат. Оформим ОСАГО или КАСКО быстро и выгодно, найдем оптимальную страховку.' }
+  ]
 })
 </script>
 
 <style lang="scss">
-
-
 .main_container {
   &__navigation {
     a {
@@ -80,6 +87,7 @@ useHead({
     @include more-than-mobile {
       flex-direction: row;
     }
+
     @include more-than-tablet {
       padding-left: 100px;
     }
@@ -107,7 +115,7 @@ useHead({
     }
 
     @include more-than-laptop {
-      padding: 150px 0;
+      padding: 150px 40px;
     }
 
     h1 {
@@ -117,8 +125,22 @@ useHead({
       margin-bottom: 40px;
       text-align: center;
       width: 100% !important;
+
       @include more-than-tablet {
         font-size: 36px;
+      }
+    }
+
+    h5 {
+      font-size: 16px;
+      line-height: 160%;
+      margin-bottom: 40px;
+      text-align: center;
+      opacity: 0.85;
+
+      @include more-than-tablet {
+        font-size: 18px;
+        margin-bottom: 60px;
       }
     }
 

@@ -28,6 +28,11 @@
         </div>
       </div>
     </div>
+    <div
+      v-if="bottomText"
+      class="benefits__bottom-text"
+      v-html="bottomText"
+    />
   </div>
 </template>
 
@@ -42,6 +47,7 @@ interface Props {
     img?: string
     description?: string
   }[]
+  bottomText?: string
 }
 
 const { title, benefitsData, iconwidth, backgroundColor, borderRadius } = defineProps<Props>()
@@ -173,5 +179,32 @@ const { title, benefitsData, iconwidth, backgroundColor, borderRadius } = define
       }
     }
   }
+  .benefits__bottom-text {
+  margin-top: 40px;
+  max-width: 1000px;
+  padding: 0 16px;
+  font-size: 16px;
+  line-height: 1.7;
+  color: #444;
+
+  @include more-than-tablet {
+    padding: 0;
+    font-size: 18px;
+  }
+
+  p {
+    margin-bottom: 16px;
+  }
+
+  ul {
+    padding-left: 20px;
+    margin-bottom: 16px;
+
+    li {
+      list-style: disc;
+      margin-bottom: 8px;
+    }
+  }
+}
 }
 </style>

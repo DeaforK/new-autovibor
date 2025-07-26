@@ -2,8 +2,13 @@
   <div class="car-filter">
     <div class="car-logos" />
     <div class="car-filter__container">
-      <h2>Фильтр по машинам</h2>
-
+      <h2>{{ title || 'Фильтр по машинам' }}</h2>
+      <p
+        v-if="subtitle"
+        class="car-filter__subtitle"
+      >
+        {{ subtitle }}
+      </p>
       <div class="car-filter__container__wrapper">
         <q-select
           id="mark-id"
@@ -95,6 +100,11 @@ import { useImportedCarsStore } from '~/components/public/entities/ImportedCars/
 import { type TImportedCarsResponse } from '~/components/public/entities/ImportedCars/types'
 
 const { getImportedCars } = useImportedCarsStore()
+
+defineProps<{
+  title?: string
+  subtitle?: string
+}>()
 
 const brand = ref({label: '', value: ''})
 const model = ref({label: '', value: ''})
@@ -192,7 +202,17 @@ watch(page, async () => {
   height: 76px;
   background-repeat: repeat;
 }
+.car-filter__subtitle {
+  text-align: center;
+  font-size: 16px;
+  line-height: 1.4;
+  color: #666;
+  margin-bottom: 30px;
 
+  @include more-than-tablet {
+    font-size: 18px;
+  }
+}
 .catalog-container__wrapper {
   display: grid;
   grid-template-columns: 1fr;

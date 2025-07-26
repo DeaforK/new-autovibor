@@ -3,6 +3,26 @@
     <h2>Что входит в полную проверку автомобиля</h2>
 
     <p>Комплексная диагностика каждого транспорта</p>
+    <div class="car-check-text">
+      <p>
+        Независимо от того, хотите вы купить авто, заказать подбор авто, получить консультацию или юридическое
+        сопровождение,
+        мы обеспечиваем комплексное ведение сделки — от первого обращения до регистрации в ГИБДД.
+      </p>
+      <p>
+        Подбор авто с пробегом или нового автомобиля проводится по заданным клиентом критериям:
+      </p>
+      <ul>
+        <li>техническое состояние</li>
+        <li>стоимость</li>
+        <li>условия эксплуатации</li>
+        <li>марка, модель и комплектация</li>
+      </ul>
+      <p>
+        После согласования покупки мы оформляем документы и сопровождаем клиента на следующих этапах:
+        страхование, постановка на учёт и др.
+      </p>
+    </div>
     <div class="car-container__btn-wrapper">
       <div class="car-frame">
         <div class="top">
@@ -216,6 +236,7 @@
   margin: 0 auto;
   margin-top: 70px;
   margin-bottom: 50px;
+  text-align: left;
   justify-content: center;
   gap: 16px;
   flex-direction: column;
@@ -236,12 +257,12 @@
     color: black;
 
     @include more-than-small-mobile {
-        font-size: 28px;
-        line-height: 120%;
-        padding: 0 !important;
-        margin: 0 !important;
+      font-size: 28px;
+      line-height: 120%;
+      padding: 0 !important;
+      margin: 0 !important;
 
-      }
+    }
 
     @include more-than-laptop {
       font-size: 36px;
@@ -288,7 +309,8 @@
           flex-wrap: nowrap;
         }
 
-        div:nth-child(2), div:nth-child(3){
+        div:nth-child(2),
+        div:nth-child(3) {
           margin-bottom: 35px;
         }
       }
@@ -328,7 +350,9 @@
         @include more-than-tablet {
           flex-wrap: nowrap;
         }
-        div:nth-child(2), div:nth-child(3) {
+
+        div:nth-child(2),
+        div:nth-child(3) {
           margin-top: 35px;
         }
       }
@@ -352,6 +376,7 @@
           padding: 0px;
           gap: 35px;
         }
+
         div:nth-child(2) {
           margin-left: 35px;
         }
@@ -380,11 +405,47 @@
       @include more-than-desktop {
         min-height: 300px;
       }
+
       @include more-than-desktop-big {
         min-height: 320px;
       }
     }
   }
+
+  .car-check-text {
+    max-width: 850px;
+    margin: 0 auto;
+    padding: 0 15px;
+    font-size: 16px;
+    line-height: 160%;
+    color: #111;
+    text-align: left;
+
+    @include more-than-tablet {
+      font-size: 17px;
+      line-height: 165%;
+    }
+
+    @include more-than-laptop {
+      font-size: 18px;
+      line-height: 170%;
+    }
+
+    ul {
+      padding-left: 20px;
+      margin: 10px 0;
+      list-style-type: disc;
+
+      li {
+        margin-bottom: 6px;
+      }
+    }
+
+    p {
+      margin-bottom: 14px;
+    }
+  }
+
 }
 
 .car-btns {
@@ -404,6 +465,7 @@
   @include more-than-tablet {
     grid-template-columns: repeat(3, 1fr);
   }
+
   @include more-than-laptop {
     display: none;
   }

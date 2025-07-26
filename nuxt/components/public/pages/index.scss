@@ -84,6 +84,37 @@
     @include more-than-laptop {
       grid-template-columns: repeat(3, 1fr);
     }
+    h5, p {
+      text-align: center;
+      padding: 0 10px;
+
+      @include more-than-tablet {
+        text-align: left;
+        padding: 0;
+      }
+
+      b {
+        display: inline-block;
+      }
+    }
+
+    h5 {
+      font-size: 20px;
+      margin-top: 10px;
+      margin-bottom: 10px;
+      @include more-than-tablet {
+        font-size: 24px;
+      }
+    }
+
+    p {
+      font-size: 16px;
+      line-height: 1.6;
+      margin-bottom: 10px;
+      @include more-than-tablet {
+        font-size: 18px;
+      }
+    }
   }
   
   &__social {

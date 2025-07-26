@@ -5,7 +5,7 @@
       :video="true"
     >
       <template #title>
-        Найдем лучший автомобиль в рамках вашего бюджета
+        Профессиональный подбор автомобилей в Екатеринбурге – надежно и без переплат
       </template>
     </PublicWidgetsTopHeroSection>
 
@@ -52,7 +52,7 @@
       "
     >
       <template #title>
-        Почему работать с нами максимально выгодно?
+        Почему «Автовыбор» — лучшая компания по подбору авто?
       </template>
       <template #body>
         <div v-html="data.workWithUs" />
@@ -87,9 +87,16 @@
       </div>
     </PublicSharedUiOrangeWrapper>
 
-    <PublicSharedUiWhiteWrapper title="Почему стоит обратиться именно к нам">
+    <PublicSharedUiWhiteWrapper title="Как мы добиваемся результата?">
       <div class="container__white_content">
         <PublicWidgetsAboutWhyUs :props="data.whyUs" />
+        <h5><b>Услуги в любом регионе.</b></h5>
+        <p>
+          <b>Даже если вы находитесь в другом городе, мы готовы помочь!</b>
+        </p>
+        <p>
+          <b>Наши специалисты подберут, продиагностируют и доставят выбранный вами автомобиль прямо к вашему дому!</b>
+        </p>
       </div>
     </PublicSharedUiWhiteWrapper>
 
@@ -122,8 +129,10 @@
 import { data } from './data'
 import { useInitStore } from '~/components/public/entities/initStore/model'
 useHead({
-  title:
-    'Автоподбор в Екатеринбурге - найдем лучшее авто в ЕКБ! Подбор автомобиля, помощь в покупке. '
+  title: 'Автовыбор — Помощь в подборе авто c пробегом в Екатеринбурге под ключ',
+  meta: [
+    { name: 'description', content: 'Помогаем выбрать, проверить и доставить автомобиль. Полная диагностика, юридическое сопровождение, страхование. Авто из Японии, Китая и России.' }
+  ]
 })
 
 const { statistics } = useInitStore()

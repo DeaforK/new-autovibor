@@ -399,6 +399,7 @@ const filteredSocial = computed(() => {
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             padding: 10px 0;
             display: none;
+            background-color: #0b1115;
 
             li {
               padding: 6px 16px;

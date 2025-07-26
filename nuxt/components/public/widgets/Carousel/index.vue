@@ -3,7 +3,12 @@
     <h2 class="carousel-container__header">
       {{ data.title }}
     </h2>
-
+    <p
+      v-if="data.subtitle"
+      class="carousel-container__after"
+    >
+      {{ data.subtitle }}
+    </p>
     <div class="carousel_wrapper">
       <Swiper
         :breakpoints="{ 1080: { slidesPerView: 3 }, 640: { slidesPerView: 2 } }"
@@ -42,12 +47,20 @@
         </SwiperSlide>
       </Swiper>
     </div>
+    <p
+      v-if="data.afterText"
+      class="carousel-container__after"
+    >
+      {{ data.afterText }}
+    </p>
   </div>
 </template>
 
 <script lang="ts" setup>
 interface Props {
   title: string
+  subtitle?: string
+  afterText?: string
   props: {
     title?: string
     description: string
@@ -89,6 +102,14 @@ const data = defineProps<Props>()
       margin: 0 auto;
       margin-bottom: 40px;
     }
+  }
+  &__after {
+    font-size: 16px;
+    line-height: 1.6;
+    text-align: center;
+    margin: 40px auto 0;
+    max-width: 750px;
+    color: #333;
   }
 }
 .carousel_wrapper {

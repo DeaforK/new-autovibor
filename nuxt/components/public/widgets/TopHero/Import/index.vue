@@ -7,7 +7,12 @@
       <h1 class="top-hero-section_container__left_container_hero_info__heading">
         <slot name="title" />
       </h1>
-
+      <p
+        style="margin-top: 30px"
+        class="top-hero-section_container__left_container_hero_info__sub-title"
+      >
+        <slot name="title-body" />
+      </p>
       <q-list class="top-hero-section_container__left_container__list">
         <q-item
           v-for="(point, idx) in list"
