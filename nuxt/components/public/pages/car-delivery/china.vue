@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <PublicWidgetsTopHeroImportJKC
+    <PublicWidgetsTopHeroCountries
       :list="pageData.fields.list"
       :background-image="pageData.fields.backgroundImage"
     >
@@ -17,21 +17,21 @@
       >
         {{ pageData.fields.topHeroDescription }}
       </template>
-    </PublicWidgetsTopHeroImportJKC>
+    </PublicWidgetsTopHeroCountries>
     <PublicWidgetsInfoStatistics :statistics="importedPageStatistics" />
     <PublicWidgetsCarFilter :title="pageData?.fields.filterTitle" />
-    <PublicWidgetsReviewsBlock />
-    <PublicWidgetsSection2 />
-    <CarCostEstimateSection />
-    <CompanyTrustSection :title="pageData?.fields.companyTitle" />
-    <WhyChooseUs />
-    <PublicWidgetsAboutPaymentStagesSteps :steps="pageData.fields.steps" />
+    <PublicWidgetsReviewsSlider />
+    <PublicWidgetsInfoChinaKey />
+    <PublicWidgetsCarCostEstimate />
+    <PublicWidgetsCompanyTrust :title="pageData?.fields.companyTitle" />
+    <PublicWidgetsWhyChooseUs />
+    <PublicWidgetsAboutPaymentSteps :steps="pageData.fields.steps" />
     <PublicWidgetsInfoCheckStatusCar />
     <PublicWidgetsAboutPaymentStages :stages="pageData.fields.stages" />
-    <PublicWidgetsFormCarCost />
+    <PublicWidgetsCommonFormCarCost />
     <PublicWidgetsAboutWhyChooseUs :points="carDeliveryData.whyChooseUsPoints" />
     <PublicWidgetsAboutYoutubeChannel />
-    <Consult />
+    <PublicWidgetsInfoConsultCountries />
     <PublicWidgetsAboutRating />
     <PublicWidgetsAboutMap />
   </div>
@@ -41,19 +41,10 @@
 import { carDeliveryData } from './data'
 import { deliveryPages } from './pageData'
 import { useInitStore } from '~/components/public/entities/initStore/model'
-import PublicWidgetsTopHeroImportJKC from '~/components/public/widgets/ReviewsSlider/PublicWidgetsTopHeroImportJKC.vue'
-import PublicWidgetsReviewsBlock from '~/components/public/widgets/ReviewsSlider/index.vue'
-import PublicWidgetsSection2 from '~/components/public/widgets/ReviewsSlider/Section2.vue'
-import CarCostEstimateSection from '~/components/public/widgets/ReviewsSlider/CarCostEstimateSection.vue'
-import CompanyTrustSection from '~/components/public/widgets/ReviewsSlider/CompanyTrustSection.vue'
-import WhyChooseUs from '~/components/public/widgets/ReviewsSlider/WhyChooseUs.vue'
-import PublicWidgetsAboutPaymentStagesSteps from '~/components/public/widgets/ReviewsSlider/PublicWidgetsAboutPaymentStagesSteps.vue'
-import PublicWidgetsFormCarCost from '~/components/public/widgets/ReviewsSlider/PublicWidgetsFormCarCost.vue'
-import Consult from '~/components/public/widgets/ReviewsSlider/Consult.vue'
 
 const { importedPageStatistics } = useInitStore()
 
-const pageData = deliveryPages['china'] // или 'japan', 'china' в зависимости от страницы
+const pageData = deliveryPages['china']
 
 
 useHead({
